@@ -4,8 +4,9 @@ const ComputerCharacter = ({}) => {
 
     return(
         <div className="colin-container">
+            <h4 className="font">Your opponent: Colin</h4> 
             <img className="colin_image" src={imgSource} alt="not found"/>
-            <h4>Your opponent: Colin</h4> 
+            
         </div>  
 
     )

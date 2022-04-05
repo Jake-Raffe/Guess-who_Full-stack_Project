@@ -23,7 +23,7 @@ body{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr 1fr 1fr;
-	width: 40%;
+	width: 45%;
 	height: auto;
 	grid-gap: 50 rem;
 	text-transform: capitalize;
@@ -45,6 +45,9 @@ body{
 	margin-right: 3%;
 	margin-left: 1%;
 	margin-top: 1%;
+	display: flex;
+  	flex-flow: column nowrap;
+  	align-items: center;
 }
 
 .card_image {
@@ -92,11 +95,15 @@ body{
 	/* padding: 25px; */
 }
 
-
-.miniBoardContainer {
+/* h3 {
+	margin-bottom: 10px;
+} */
+.miniBoardGrid{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr 1fr 1fr;
+}
+.miniBoardContainer {
 	background-color: var(--teal);
 	width: 100%;
 	/* margin-left: 1rem; */
@@ -115,18 +122,19 @@ p {
 	font-size: xx-small;
 }
 
-.mini-eliminated {
-	border-color: red;
-	background-color: red;
-}
 
 .minicard {
 	margin: auto;
 	text-align: center;
 	border: 1px solid white;
+	border-radius: 0.5rem;
 	background-color: rgb(202, 167, 224);
 }
 
+.mini-eliminated {
+	border-color: red;
+	background-color: red;
+}
 
 /* inner grid - eacrgb(0, 0, 0)racter card */
 .board {
@@ -165,6 +173,7 @@ h4 {
 .winner {
 	border-color: gold;
 	background-color: gold;
+	/* box-shadow: 0px 0px 50px var(--gold); */
 }
 
 .player-section{
@@ -181,9 +190,11 @@ h4 {
 	padding: 15px;
 	border-radius: 12px;
 	/* box-shadow: 0px 0px 50px var(--gold); */
-	height: fit-content;
+	/* height: 100%; */
 	border: 3px solid rgb(230, 230, 230);
 	width: 20%;
+	/* height: 100%; */
+	max-height: 500px;
 
 }
 
@@ -200,8 +211,9 @@ h4 {
 
 .output-card {
 	/* border: 2px black dashed; */
-	width: 100%;
-	height: 350px;
+	/* width: 100%; */
+	/* height: 200px; */
+	/* background-color: black; */
 	text-align: center;
 	text-transform: capitalize;
 	/* height: 460px; */
@@ -221,7 +233,7 @@ h4 {
 
 .chosen-image {
 	max-width: 100%;
-	border-radius: 2rem;
+	border-radius: 1rem;
 }
 
 h1 {
@@ -308,17 +320,22 @@ h3 {
 }
 
 .questions {
-	color: black;
-	background-color: var(--teal);
-	width: 200px;
-	display: flex;
-	list-style: none;
 	text-align: center;
+	border-radius: 12px;
+	background-color: #a4cc98;
+	border: none;
+	/* padding: 10px; */
+	background-color: var(--teal);
+	
+	color: black;
+	/* width: 200px; */
+	/* display: flex; */
+	list-style: none;
 }
 
 .questionOptions {
 	position: relative;
-	font-size: 14px;
+	font-size: medium;
 }
 
 .questionOptions h5 {

@@ -12,7 +12,7 @@ const MiniBoard = ({characterList, remainingComputerCharacters}) => {
     return(
 
         <>
-        
+    
             {generateMiniBoard}
         
         </>

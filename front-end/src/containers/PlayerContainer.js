@@ -28,17 +28,24 @@ const PlayerContainer = ({characterList, character, resetGame, startGame, queryC
     return (
     <>
     <section className='player-section' >
-        {/* <article className="gameButtons">
-          <button className= "buttons bubble" onClick={() => handleStartClick()}>Start game</button>
-            <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
-        </article> */}
+
+
+        {/*
+        <div className='output-card font'>
+                <h4>Your chosen character:</h4>
+                <img className="chosen-image" src={imgsrc} alt="not found"></img>
+                <h3>{chosenCharacter.name}</h3>
+            </div>
+      */}
        
           <ComputerCharacter/>
         
         <article className='bubble '>
-        <h3>Opponent board:</h3>
-        <div className='miniBoardContainer'>
+        <div className='miniBoardContainer '>
+        <h2 >Opponent board:</h2>
+        <div className='miniBoardGrid'>
         <MiniBoard characterList={characterList} remainingComputerCharacters={remainingComputerCharacters}/>
+        </div>
         </div>
         </article>
     </section>
@@ -47,3 +54,8 @@ const PlayerContainer = ({characterList, character, resetGame, startGame, queryC
 
 }
 export default PlayerContainer;
+
+        {/* <article className="gameButtons">
+          <button className= "buttons bubble" onClick={() => handleStartClick()}>Start game</button>
+            <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
+        </article> */}
