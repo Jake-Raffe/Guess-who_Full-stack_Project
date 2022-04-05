@@ -238,14 +238,14 @@ h3 {
 	0%, 18%, 22%, 25%, 53%, 65%, 100% {
   
 		text-shadow:
-		0 0 1px var(--teal),
-		0 0 180px var(--teal),
+		0 0 3px var(--teal),
+		0 0 10px var(--teal),
 		0 0 16px var(--teal),
-		0 0 250px var(--teal),
+		0 0 40px var(--teal),
 		0 0 40px var(--teal),
 		0 0 50px var(--teal),
-		0 0 250px var(--teal),
-		0 0 400px var(--teal)
+		0 0 100px var(--teal),
+		0 0 150px var(--teal)
 	/*#0fa*/
 	}
 	
