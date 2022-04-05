@@ -12,3 +12,6 @@ Copy this code and run it in your SQL editor or in terminal by typing psql first
 
 ## Run the back-end
 In the back-end go to the main class and press play
+
+## Run the front end 
+Open up the front end in terminal and write npm start
