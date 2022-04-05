@@ -88,10 +88,10 @@ padding: 12px;
 	padding: 15px;
 	border-radius: 12px;
 	/* box-shadow: 0px 0px 50px var(--gold); */
-	height: 45%;
+	height: 15%;
 	border: 3px solid rgb(230, 230, 230);
-
 }
+
 p {
 	font-size: xx-small;
 }
@@ -101,10 +101,10 @@ p {
 	background-color: red;
 }
 
-/* .minicard {
-margin: auto;
-text-align: center;
-} */
+.minicard {
+	margin: auto;
+	text-align: center;
+}
 
 
 /* inner grid - eacrgb(0, 0, 0)racter card */
@@ -257,7 +257,7 @@ h3 {
 	/*#0fa*/
 	}
 	
-	20%, 24%, 70% {        
+	10%, 14%, 40% {        
 		text-shadow: none;
 	}    
   }
@@ -306,6 +306,7 @@ h3 {
 .questionOptions a:hover,
 .questionOptions button:hover {
 	background-color: var(--pink);
+	border-radius: 12px;
 }
 
 .arrow::after {
