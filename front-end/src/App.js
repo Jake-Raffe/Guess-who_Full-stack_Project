@@ -64,7 +64,7 @@ function App() {
  const canvasStyle = {
     position: "relative",
     PointerEvent: "none",
-    width: "100%",
+    width: "60%",
     height: "100%",
     top: 0,
     left: 0
@@ -151,7 +151,7 @@ function App() {
       if(guess.id === computerCharacter.id){
         setGameWon('player');
         setDisplayMessage(`Congratulations, it was ${guess.name}!`);
-        fire()
+        fire();
         var audio = new Audio('../win.mp3');
         audio.play();
         playWin();
@@ -356,12 +356,12 @@ function App() {
     <>
       <div className="game_title">
         <h1 className="game_title_text neonText">? ?   G u e s s W h o   ? ?</h1>
-        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyle}/>
+        <ReactCanvasConfetti className="center" refConfetti={getInstance} style={canvasStyle}/>
       </div>
       <TopBarContainer compareQueryToBoard={compareQueryToBoard} resetGame={resetGame} playerTurn={playerTurn} displayMessage={displayMessage} setDisplayMessage={setDisplayMessage} startGame={startGame} chosenCharacter={chosenCharacter} setQueryOption={setQueryOption} makeGuess={makeGuess} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} displayQuestionMessage={displayQuestionMessage} setDisplayQuestionMessage={setDisplayQuestionMessage} setIsGuessing={setIsGuessing}/>
       <div className='entireGame'>
         <BoardContainer gameWon={gameWon} remainingCharacters={remainingCharacters} characterList={characterList} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter} makeGuess={makeGuess} isGuessing={isGuessing} setIsGuessing={setIsGuessing}/>
-        <PlayerContainer  characterList={characterList} queryCharacters={queryCharacters} chosenCharacter={chosenCharacter} startGame={startGame} setQueryOption={setQueryOption} remainingComputerCharacters={remainingComputerCharacters}/>
+        <PlayerContainer  characterList={characterList} queryCharacters={queryCharacters} chosenCharacter={chosenCharacter} startGame={startGame} setQueryOption={setQueryOption} resetGame={resetGame}  remainingComputerCharacters={remainingComputerCharacters}/>
       </div>
       <h2>PC character is: {computerCharacter.name}</h2> 
     </>

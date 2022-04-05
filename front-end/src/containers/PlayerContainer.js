@@ -5,27 +5,32 @@ import CharacterCard from "../components/CharacterCard";
 import MiniBoard from "../components/MiniBoard";
 
 
-const PlayerContainer = ({characterList, character, queryCharacters, choosePlayerCharacter, chosenCharacter, setQueryOption, remainingComputerCharacters}) => {
+const PlayerContainer = ({characterList, character, resetGame, startGame, queryCharacters, choosePlayerCharacter, chosenCharacter, setQueryOption, remainingComputerCharacters}) => {
     
     
     
-    // const chosenCharacterMap = () => characterList.map(char => {
-    //     if (char.id === chosenCharacter.id){
-    //     return <CharacterCard className="containerItems" character={character} key={character.id}/>
-    //     }
-    // })
-
-    // const characterMap = characterList.map((character, index) => {
-    //     return <CharacterCard id={index} className="containerItems" character={character} key={character.id} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter}/>
-    // })
     
+    // const handleStartClick = () => {
+    //   if (chosenCharacter.name !== ""){
+    //       startGame();
+    //   }
+    //   else {
+    //       alert("Choose a character before you start!")
+    //   }
+    // }
    
-
+    // const handleResetClick = () => {
+    //   resetGame();
+    // }
     
 
     return (
     <>
     <section className='player-section' >
+        {/* <article className="gameButtons">
+          <button className= "buttons bubble" onClick={() => handleStartClick()}>Start game</button>
+            <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
+        </article> */}
         <article className='player-container bubble' id='chosen-character'>
           <ChosenCharacter  chosenCharacter={chosenCharacter} />  
         </article>

@@ -1,32 +1,31 @@
 import { useState, useEffect } from "react";
 import QuestionForm from "../components/QuestionForm";
 
-const TopBarContainer = ({compareQueryToBoard, resetGame, displayMessage, playerTurn, startGame, chosenCharacter, setQueryOption, setDisplayMessage, makeGuess, setPlayerTurn, runComputerTurn, displayQuestionMessage, setDisplayQuestionMessage, setIsGuessing}) => {
+const TopBarContainer = ({compareQueryToBoard, displayMessage, resetGame, startGame, playerTurn, chosenCharacter, setQueryOption, setDisplayMessage, makeGuess, setPlayerTurn, runComputerTurn, displayQuestionMessage, setDisplayQuestionMessage, setIsGuessing}) => {
 
 
     const[questionColour, setQuestionColour] = useState("grey")
 
+    
+    const handleGuessClick = () => {
+        setDisplayMessage('Click on a character then make a guess')
+        setIsGuessing(true);
+    }
+
     const handleStartClick = () => {
+        console.log('starting');
         if (chosenCharacter.name !== ""){
             startGame();
         }
         else {
             alert("Choose a character before you start!")
         }
-
-    }
-    // const handleGuessSubmitClick= () => {
-    //     makeGuess();
-
-    // }
-    const handleGuessClick = () => {
-        setDisplayMessage('Click on a character then make a guess')
-        setIsGuessing(true);
-    }
-
-    const handleResetClick = () => {
+  
+      }
+     
+      const handleResetClick = () => {
         resetGame();
-    }
+      }
 
 
     // const handleCardClick = () => {
@@ -62,14 +61,18 @@ const TopBarContainer = ({compareQueryToBoard, resetGame, displayMessage, player
 
     return (
         <div id='questionForm'>
-            <section className="displayMessage  bubble">
-            <h2 >{displayMessage}</h2>
-             <h3 className={`questionMessage ${questionColour}`}>{displayQuestionMessage}</h3>
-             </section>
-            <QuestionForm compareQueryToBoard={compareQueryToBoard} playerTurn={playerTurn} setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} setDisplayQuestionMessage={setDisplayQuestionMessage} chosenCharacter={chosenCharacter}/>
-            <button className= "buttons bubble" onClick={() => handleGuessClick()}>Make Guess</button>
-            <button className= "buttons bubble" onClick={() => handleStartClick()}>Start game</button>
-            <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
+            <section className="questionButtons">
+                <QuestionForm compareQueryToBoard={compareQueryToBoard} playerTurn={playerTurn} setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} setDisplayQuestionMessage={setDisplayQuestionMessage} chosenCharacter={chosenCharacter}/>
+                <button className="bubble buttons" onClick={() => handleGuessClick()}>Make Guess</button>
+            </section>
+            <section className="displayMessage bubble">
+                <h2 >{displayMessage}</h2>
+                <h3 className={`questionMessage ${questionColour}`}>{displayQuestionMessage}</h3>
+            </section> 
+            <section className="gameButtons">
+                <button className= "buttons bubble" onClick={handleStartClick}>Start game</button>
+                <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
+            </section> 
         </div>
         
     )

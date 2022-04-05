@@ -31,12 +31,12 @@ const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDispl
 
     return (
         <>
-        <ul className="questions bubble" id="questionButton">{questions.map((question, index) => {  // questions = menuItems
+        <div className="questions bubble" id="questionButton">{questions.map((question, index) => {  // questions = menuItems
             return <QuestionList setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} options={question} key={index} depthLevel={depthLevel} setDisplayQuestionMessage={setDisplayQuestionMessage}/>    // QuestionList = MenuItems
             // create a prop called options which takes our questions.js
         })}
-        </ul>
-        <button type="button" className="buttons" onClick={() => submitQuestion()}>Ask question!</button>
+        </div>
+        <button type="button" className=" bubble buttons" onClick={() => submitQuestion()}>Ask question!</button>
         </>
     )
 }
