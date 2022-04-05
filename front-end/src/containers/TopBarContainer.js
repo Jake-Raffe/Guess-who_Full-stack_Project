@@ -62,12 +62,14 @@ const TopBarContainer = ({compareQueryToBoard, resetGame, displayMessage, player
 
     return (
         <div id='questionForm'>
-            <h2>{displayMessage}</h2>
-             <h3 className={`${questionColour}`}>{displayQuestionMessage}</h3>
+            <section className="displayMessage  bubble">
+            <h2 >{displayMessage}</h2>
+             <h3 className={`questionMessage ${questionColour}`}>{displayQuestionMessage}</h3>
+             </section>
             <QuestionForm compareQueryToBoard={compareQueryToBoard} playerTurn={playerTurn} setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} setDisplayQuestionMessage={setDisplayQuestionMessage} chosenCharacter={chosenCharacter}/>
-            <button className= "buttons" onClick={() => handleStartClick()}>Start game</button>
-            <button className= "buttons" onClick={() => handleGuessClick()}>Make Guess</button>
-            <button className= "buttons" onClick={() => handleResetClick()}>Reset Game</button>
+            <button className= "buttons bubble" onClick={() => handleGuessClick()}>Make Guess</button>
+            <button className= "buttons bubble" onClick={() => handleStartClick()}>Start game</button>
+            <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
         </div>
         
     )

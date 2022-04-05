@@ -31,7 +31,7 @@ const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDispl
 
     return (
         <>
-        <ul className="questions" id="questionButton">{questions.map((question, index) => {  // questions = menuItems
+        <ul className="questions bubble" id="questionButton">{questions.map((question, index) => {  // questions = menuItems
             return <QuestionList setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} options={question} key={index} depthLevel={depthLevel} setDisplayQuestionMessage={setDisplayQuestionMessage}/>    // QuestionList = MenuItems
             // create a prop called options which takes our questions.js
         })}
