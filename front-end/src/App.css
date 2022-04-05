@@ -24,7 +24,7 @@ body{
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr 1fr 1fr;
 	width: 58%;
-	margin-left: 26rem;
+	margin-left: 22.5%;
 	grid-gap: 50 rem;
 	text-transform: capitalize;
 }
@@ -49,7 +49,7 @@ body{
 	width: auto;
 	margin: 1rem;
 	border-radius: 1rem;
-	border: 3px solid var(--navy);
+	/* border: 3px solid var(--navy); */
 }
 
 .displayMessage{
@@ -80,11 +80,17 @@ padding: 12px;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr 1fr 1fr;
-	background-color: rgb(92, 52, 117);
+	background-color: var(--teal);
 	width: 90%;
 	/* margin-left: 1rem; */
-	border: 2px solid black;
-	grid-gap: 50 rem;
+	/* border: 2px solid black; */
+	/* grid-gap: 50 rem; */
+	padding: 15px;
+	border-radius: 12px;
+	/* box-shadow: 0px 0px 50px var(--gold); */
+	height: 45%;
+	border: 3px solid rgb(230, 230, 230);
+
 }
 p {
 	font-size: xx-small;
@@ -139,17 +145,22 @@ h4 {
 	background-color: gold;
 }
 
-#player-container {
+.player-section{
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: var(--teal);
 	width: 15%;
+
+}
+
+.player-container {
+	
+	background-color: var(--teal);
 	padding: 15px;
 	border-radius: 12px;
 	/* box-shadow: 0px 0px 50px var(--gold); */
-	height: 80%;
+	height: 45%;
 	border: 3px solid rgb(230, 230, 230);
 
 }
@@ -220,16 +231,13 @@ h3 {
 	padding: 10px;
 	font-size: large;
 	margin: 1%;
-	color: var(--primary);
+	/* color: var(--primary); */
 	background-color: var(--teal);
-}
-.dropdown {
-	display: none;
 }
 
 .neonText {
 	animation: flicker 3s infinite alternate;
-	color: rgb(255, 255, 255);
+	color: rgb(251, 214, 214);
   }
   
   /* Flickering animation */
@@ -238,12 +246,12 @@ h3 {
 	0%, 18%, 22%, 25%, 53%, 65%, 100% {
   
 		text-shadow:
-		0 0 3px var(--teal),
 		0 0 10px var(--teal),
-		0 0 16px var(--teal),
 		0 0 40px var(--teal),
+		0 0 60px var(--teal),
+		0 0 140px var(--teal),
 		0 0 40px var(--teal),
-		0 0 50px var(--teal),
+		0 0 90px var(--teal),
 		0 0 100px var(--teal),
 		0 0 150px var(--teal)
 	/*#0fa*/
@@ -253,6 +261,10 @@ h3 {
 		text-shadow: none;
 	}    
   }
+
+.dropdown {
+	display: none;
+}
 
 .questions {
 	color: black;
