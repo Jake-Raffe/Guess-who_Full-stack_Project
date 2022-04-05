@@ -89,7 +89,7 @@ body{
 	padding: 15px;
 	border-radius: 12px;
 	/* box-shadow: 0px 0px 50px var(--gold); */
-	height: 15%;
+	/* height: 15%; */
 	border: 3px solid rgb(230, 230, 230);
 }
 
@@ -160,7 +160,7 @@ h4 {
 	padding: 15px;
 	border-radius: 12px;
 	/* box-shadow: 0px 0px 50px var(--gold); */
-	height: 45%;
+	height: fit-content;
 	border: 3px solid rgb(230, 230, 230);
 
 }
@@ -182,7 +182,7 @@ h4 {
 	height: 350px;
 	text-align: center;
 	text-transform: capitalize;
-	height: 460px;
+	/* height: 460px; */
 	/* background-color: ; */
 }
 

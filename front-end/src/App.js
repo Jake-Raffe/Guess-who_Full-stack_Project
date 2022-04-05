@@ -7,6 +7,7 @@ import TopBarContainer from './containers/TopBarContainer';
 import { questions } from './components/questions';
 import { compQuestions} from './components/compQuestions';
 import ReactCanvasConfetti from "react-canvas-confetti";
+import ComputerCharacter from './components/ComputerCharacter';
 
 
 function App() {
@@ -171,7 +172,7 @@ function App() {
 //made timeout for this
   const runComputerTurn = async () => {
     // if (playerTurn === 'computer') {
-      setDisplayMessage("Computer's turn");
+      setDisplayMessage("Colin's turn");
       // setDisplayQuestionMessage("")
       if (remainingComputerCharacters.length <= 4){
         computerGuessAnswer();
@@ -206,7 +207,7 @@ function App() {
     console.log(newGuess);
     if (newGuess.id === chosenCharacter.id){
       setGameWon('computer');
-      setDisplayMessage(`The AI guessed ${chosenCharacter.name}, you lose!`);
+      setDisplayMessage(`Colin guessed ${chosenCharacter.name}, you lose!`);
               var audio = new Audio('../fail.mp3');
     audio.play();
       playLose();
@@ -360,6 +361,7 @@ function App() {
       </div>
       <TopBarContainer compareQueryToBoard={compareQueryToBoard} resetGame={resetGame} playerTurn={playerTurn} displayMessage={displayMessage} setDisplayMessage={setDisplayMessage} startGame={startGame} chosenCharacter={chosenCharacter} setQueryOption={setQueryOption} makeGuess={makeGuess} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} displayQuestionMessage={displayQuestionMessage} setDisplayQuestionMessage={setDisplayQuestionMessage} setIsGuessing={setIsGuessing}/>
       <div className='entireGame'>
+        <ComputerCharacter/>
         <BoardContainer gameWon={gameWon} remainingCharacters={remainingCharacters} characterList={characterList} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter} makeGuess={makeGuess} isGuessing={isGuessing} setIsGuessing={setIsGuessing}/>
         <PlayerContainer  characterList={characterList} queryCharacters={queryCharacters} chosenCharacter={chosenCharacter} startGame={startGame} setQueryOption={setQueryOption} resetGame={resetGame}  remainingComputerCharacters={remainingComputerCharacters}/>
       </div>
