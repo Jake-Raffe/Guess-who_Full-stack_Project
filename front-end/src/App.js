@@ -7,6 +7,7 @@ import TopBarContainer from './containers/TopBarContainer';
 import { questions } from './components/questions';
 import { compQuestions} from './components/compQuestions';
 import ReactCanvasConfetti from "react-canvas-confetti";
+import ComputerCharacter from './components/ComputerCharacter';
 
 
 function App() {
@@ -360,6 +361,7 @@ function App() {
       </div>
       <TopBarContainer compareQueryToBoard={compareQueryToBoard} resetGame={resetGame} playerTurn={playerTurn} displayMessage={displayMessage} setDisplayMessage={setDisplayMessage} startGame={startGame} chosenCharacter={chosenCharacter} setQueryOption={setQueryOption} makeGuess={makeGuess} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} displayQuestionMessage={displayQuestionMessage} setDisplayQuestionMessage={setDisplayQuestionMessage} setIsGuessing={setIsGuessing}/>
       <div className='entireGame'>
+        <ComputerCharacter/>
         <BoardContainer gameWon={gameWon} remainingCharacters={remainingCharacters} characterList={characterList} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter} makeGuess={makeGuess} isGuessing={isGuessing} setIsGuessing={setIsGuessing}/>
         <PlayerContainer  characterList={characterList} queryCharacters={queryCharacters} chosenCharacter={chosenCharacter} startGame={startGame} setQueryOption={setQueryOption} remainingComputerCharacters={remainingComputerCharacters}/>
       </div>
