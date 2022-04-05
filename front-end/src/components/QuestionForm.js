@@ -1,19 +1,28 @@
 import { useState } from "react"
+import ChosenCharacter from "./ChosenCharacter";
 import QuestionList from "./QuestionList"
 import { questions } from "./questions"
 
 
 
-const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDisplayMessage, setPlayerTurn, runComputerTurn}) => {   // this is like our navBar
+const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDisplayMessage, setPlayerTurn, runComputerTurn, setDisplayQuestionMessage, chosenCharacter}) => {   // this is like our navBar
 
 
     const depthLevel = 0;
 
     const submitQuestion = () => {
+        if(chosenCharacter.name === "") {
+            alert("Choose a character before you can ask a question ")
+        } else {
         //should change display message to '....' then a setTimer for 1 second then display message to 'True!' or 'False!' with another timer before editing the player cards if they are eliminated. Will look jarring if it all just happens instantly.
         // when they click submit, runs the compareQuery method in App.js
         compareQueryToBoard();
-        setPlayerTurn('computer');
+        setTimeout(() => {
+      setDisplayQuestionMessage("")
+      setPlayerTurn('computer');
+      setDisplayMessage("Colin's turn")
+    }, 2000);
+}
         // console.log('changing to computer turn');
         // runComputerTurn();
         // console.log('pc did its turn');
@@ -22,12 +31,12 @@ const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDispl
 
     return (
         <>
-        <ul className="questions" id="questionButton">{questions.map((question, index) => {  // questions = menuItems
-            return <QuestionList setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} options={question} key={index} depthLevel={depthLevel}/>    // QuestionList = MenuItems
+        <div className="questions bubble" id="questionButton">{questions.map((question, index) => {  // questions = menuItems
+            return <QuestionList setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} options={question} key={index} depthLevel={depthLevel} setDisplayQuestionMessage={setDisplayQuestionMessage}/>    // QuestionList = MenuItems
             // create a prop called options which takes our questions.js
         })}
-        </ul>
-        <button type="button" className="buttons" onClick={() => submitQuestion()}>Ask question!</button>
+        </div>
+        <button type="button" className=" bubble buttons" onClick={() => submitQuestion()}>Ask question!</button>
         </>
     )
 }
