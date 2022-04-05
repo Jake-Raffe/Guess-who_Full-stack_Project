@@ -1,11 +1,11 @@
-const ComputerCharacter = () => {
+const ComputerCharacter = ({}) => {
     
-    const imgSource = `../images/colin.png`
+    const imgSource = '../images/colin.png'
 
     return(
         <div className="colin-container">
-        <img className="colin_image" src={imgSource} alt="not found"/>
-        <h4>Your opponent: Colin</h4> 
+            <img className="colin_image" src={imgSource} alt="not found"/>
+            <h4>Your opponent: Colin</h4> 
         </div>  
 
     )

@@ -1,4 +1,5 @@
-import ChosenCharacter from "../components/ChosenCharacter";
+
+import ComputerCharacter from '../components/ComputerCharacter';
 import PlayerSection from "../components/PlayerSection";
 import QuestionForm from "../components/QuestionForm";
 import CharacterCard from "../components/CharacterCard";
@@ -31,11 +32,14 @@ const PlayerContainer = ({characterList, character, resetGame, startGame, queryC
           <button className= "buttons bubble" onClick={() => handleStartClick()}>Start game</button>
             <button className= "buttons bubble" onClick={() => handleResetClick()}>Reset Game</button>
         </article> */}
-        <article className='player-container bubble' id='chosen-character'>
-          <ChosenCharacter  chosenCharacter={chosenCharacter} />  
-        </article>
-        <article className='bubble miniBoardContainer'>
+       
+          <ComputerCharacter/>
+        
+        <article className='bubble '>
+        <h3>Opponent board:</h3>
+        <div className='miniBoardContainer'>
         <MiniBoard characterList={characterList} remainingComputerCharacters={remainingComputerCharacters}/>
+        </div>
         </article>
     </section>
     </>

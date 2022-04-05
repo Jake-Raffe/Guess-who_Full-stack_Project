@@ -1,4 +1,4 @@
-
+import ChosenCharacter from "./components/ChosenCharacter";
 import './App.css';
 import {useEffect, useState, useRef, useCallback} from 'react';
 import BoardContainer from './containers/BoardContainer';
@@ -7,7 +7,6 @@ import TopBarContainer from './containers/TopBarContainer';
 import { questions } from './components/questions';
 import { compQuestions} from './components/compQuestions';
 import ReactCanvasConfetti from "react-canvas-confetti";
-import ComputerCharacter from './components/ComputerCharacter';
 
 
 function App() {
@@ -359,13 +358,15 @@ function App() {
         <h1 className="game_title_text neonText">? ?   G u e s s W h o   ? ?</h1>
         <ReactCanvasConfetti className="center" refConfetti={getInstance} style={canvasStyle}/>
       </div>
-      <TopBarContainer compareQueryToBoard={compareQueryToBoard} resetGame={resetGame} playerTurn={playerTurn} displayMessage={displayMessage} setDisplayMessage={setDisplayMessage} startGame={startGame} chosenCharacter={chosenCharacter} setQueryOption={setQueryOption} makeGuess={makeGuess} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} displayQuestionMessage={displayQuestionMessage} setDisplayQuestionMessage={setDisplayQuestionMessage} setIsGuessing={setIsGuessing}/>
+        <TopBarContainer compareQueryToBoard={compareQueryToBoard} resetGame={resetGame} playerTurn={playerTurn} displayMessage={displayMessage} setDisplayMessage={setDisplayMessage} startGame={startGame} chosenCharacter={chosenCharacter} setQueryOption={setQueryOption} makeGuess={makeGuess} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} displayQuestionMessage={displayQuestionMessage} setDisplayQuestionMessage={setDisplayQuestionMessage} setIsGuessing={setIsGuessing}/>
       <div className='entireGame'>
-        <ComputerCharacter/>
+        <PlayerContainer characterList={characterList} queryCharacters={queryCharacters} chosenCharacter={chosenCharacter} startGame={startGame} setQueryOption={setQueryOption} resetGame={resetGame}  remainingComputerCharacters={remainingComputerCharacters}/>
         <BoardContainer gameWon={gameWon} remainingCharacters={remainingCharacters} characterList={characterList} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter} makeGuess={makeGuess} isGuessing={isGuessing} setIsGuessing={setIsGuessing}/>
-        <PlayerContainer  characterList={characterList} queryCharacters={queryCharacters} chosenCharacter={chosenCharacter} startGame={startGame} setQueryOption={setQueryOption} resetGame={resetGame}  remainingComputerCharacters={remainingComputerCharacters}/>
+        <article className='player-container bubble' id='chosen-character'>
+          <ChosenCharacter chosenCharacter={chosenCharacter} />  
+        </article>
       </div>
-      <h2>PC character is: {computerCharacter.name}</h2> 
+      {/* <h2>PC character is: {computerCharacter.name}</h2>  */}
     </>
   );
 }
