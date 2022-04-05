@@ -171,7 +171,7 @@ function App() {
 //made timeout for this
   const runComputerTurn = async () => {
     // if (playerTurn === 'computer') {
-      setDisplayMessage("Computer's turn");
+      setDisplayMessage("Colin's turn");
       // setDisplayQuestionMessage("")
       if (remainingComputerCharacters.length <= 4){
         computerGuessAnswer();
@@ -206,7 +206,7 @@ function App() {
     console.log(newGuess);
     if (newGuess.id === chosenCharacter.id){
       setGameWon('computer');
-      setDisplayMessage(`The AI guessed ${chosenCharacter.name}, you lose!`);
+      setDisplayMessage(`Colin guessed ${chosenCharacter.name}, you lose!`);
               var audio = new Audio('../fail.mp3');
     audio.play();
       playLose();

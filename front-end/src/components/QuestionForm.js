@@ -20,7 +20,7 @@ const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDispl
         setTimeout(() => {
       setDisplayQuestionMessage("")
       setPlayerTurn('computer');
-      setDisplayMessage("Computer's turn")
+      setDisplayMessage("Colin's turn")
     }, 2000);
 }
         // console.log('changing to computer turn');
