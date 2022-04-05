@@ -25,12 +25,25 @@ body{
 	grid-template-rows: 1fr 1fr 1fr;
 	width: 58%;
 	height: 100%;
-	margin-left: 22.5%;
 	grid-gap: 50 rem;
 	text-transform: capitalize;
 }
 
-
+.colin_image{
+	width: 100%;
+	
+}
+.colin-container{
+	background-color: var(--teal);
+	padding: 15px;
+	border-radius: 12px;
+	height: fit-content;
+	border: 3px solid rgb(230, 230, 230);
+	width: 18%;
+	margin-right: 3%;
+	margin-left: 1%;
+	margin-top: 1%;
+}
 
 .card_image {
 	max-width: 90%;
