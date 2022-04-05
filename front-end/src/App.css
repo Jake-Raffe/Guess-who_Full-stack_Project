@@ -72,13 +72,18 @@ body{
 	/* border: 3px solid var(--navy); */
 }
 
+.questionButtons {
+	margin-left: 4%;
+}
+
 .displayMessage{
-	width: 60%;
+	width: 45%;
 	color: var(--purple);
 	background-color: var(--teal);
 	text-align: center;
 	margin: auto;
-	padding: 12px;
+	margin-right: 6.2%;
+	padding: 10px;
 	height: 100px;
 }
 
@@ -122,12 +127,14 @@ p {
 	font-size: xx-small;
 }
 
-
+.opponent-font {
+	margin-bottom: 10px;
+}
 .minicard {
 	margin: auto;
 	text-align: center;
 	border: 1px solid white;
-	border-radius: 0.5rem;
+	border-radius: 0.2rem;
 	background-color: rgb(202, 167, 224);
 }
 
@@ -173,7 +180,7 @@ h4 {
 .winner {
 	border-color: gold;
 	background-color: gold;
-	/* box-shadow: 0px 0px 50px var(--gold); */
+	box-shadow: 0px 0px 50px var(--gold);
 }
 
 .player-section{
@@ -221,6 +228,11 @@ h4 {
 }
 
 .gameButtons{
+	margin-right: 6%;
+/* float: left;
+left: 20%; */
+/* position:absolute;
+right:200px; */
 
 }
 

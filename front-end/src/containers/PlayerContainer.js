@@ -42,7 +42,7 @@ const PlayerContainer = ({characterList, character, resetGame, startGame, queryC
         
         <article className='bubble '>
         <div className='miniBoardContainer '>
-        <h2 >Opponent board:</h2>
+        <h2 className='opponent-font' >Opponent board:</h2>
         <div className='miniBoardGrid'>
         <MiniBoard characterList={characterList} remainingComputerCharacters={remainingComputerCharacters}/>
         </div>

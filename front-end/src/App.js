@@ -176,6 +176,9 @@ function App() {
       if (remainingComputerCharacters.length <= 4){
         computerGuessAnswer();
         setDisplayQuestionMessage("Guessing...");
+        // setTimeout(() => {
+        //   setDisplayQuestionMessage(`Colin guessed ${chosenCharacter.name}`);
+        // }, 2000);
         setTimeout(() => {
           setDisplayQuestionMessage("");
         }, 4000);
