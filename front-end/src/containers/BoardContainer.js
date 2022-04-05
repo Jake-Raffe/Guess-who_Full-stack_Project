@@ -1,12 +1,19 @@
 import CharacterCard from "../components/CharacterCard";
 
-const BoardContainer = ({characterList, queryCharacter, choosePlayerCharacter, computerCharacter}) => {
+const BoardContainer = ({characterList, gameWon, choosePlayerCharacter, computerCharacter, remainingCharacters, makeGuess, isGuessing, setIsGuessing}) => {
+
     
+
+
+
     const characterMap = characterList.map((character, index) => {
-        return <CharacterCard id={index} className="containerItems" character={character} key={character.id} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter}/>
+
+        return <CharacterCard id={index} remainingCharacters={remainingCharacters} gameWon={gameWon} className='containerItems' character={character} key={character.id} choosePlayerCharacter={choosePlayerCharacter} computerCharacter={computerCharacter} makeGuess={makeGuess} isGuessing={isGuessing} setIsGuessing={setIsGuessing}/>
     })
     
     
+    
+
     return (
     <section className = "boardContainer">
         {characterMap}
