@@ -61,7 +61,7 @@ function App() {
 
 
   // confetti stuff for win
-
+//
  const canvasStyle = {
     position: "relative",
     PointerEvent: "none",
