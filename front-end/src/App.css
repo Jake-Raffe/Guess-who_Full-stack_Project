@@ -23,17 +23,36 @@ body{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr 1fr 1fr;
-	width: 58%;
-	height: 100%;
-	margin-left: 22.5%;
+	width: 45%;
+	height: auto;
 	grid-gap: 50 rem;
 	text-transform: capitalize;
+	/* margin: 1rem; */
 }
 
-
+.colin_image{
+	/* width: 100%; */
+	max-height: 300px;
+	
+}
+.colin-container{
+	background-color: var(--teal);
+	padding: 15px;
+	border-radius: 12px;
+	height: fit-content;
+	border: 3px solid rgb(230, 230, 230);
+	width: 100%;
+	margin-right: 3%;
+	margin-left: 1%;
+	margin-top: 1%;
+	display: flex;
+  	flex-flow: column nowrap;
+  	align-items: center;
+}
 
 .card_image {
-	max-width: 90%;
+	width: 95%;
+	/* max-height: 20%; */
 	border-radius: 1rem;
 	margin: 2.5%;
 }
@@ -53,13 +72,18 @@ body{
 	/* border: 3px solid var(--navy); */
 }
 
+.questionButtons {
+	margin-left: 5.3%;
+}
+
 .displayMessage{
-	width: 60%;
+	width: 45%;
 	color: var(--purple);
 	background-color: var(--teal);
 	text-align: center;
 	margin: auto;
-	padding: 12px;
+	margin-right: 7.6%;
+	padding: 10px;
 	height: 100px;
 }
 
@@ -73,16 +97,20 @@ body{
 
 
 .game_title_text {
-	padding: 25px;
+	/* padding: 25px; */
 }
 
-
-.miniBoardContainer {
+/* h3 {
+	margin-bottom: 10px;
+} */
+.miniBoardGrid{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: 1fr 1fr 1fr;
+}
+.miniBoardContainer {
 	background-color: var(--teal);
-	width: 90%;
+	width: 100%;
 	/* margin-left: 1rem; */
 	/* border: 2px solid black; */
 	/* grid-gap: 50 rem; */
@@ -93,20 +121,27 @@ body{
 	border: 3px solid rgb(230, 230, 230);
 }
 
+
+
 p {
 	font-size: xx-small;
+}
+
+.opponent-font {
+	margin-bottom: 10px;
+}
+.minicard {
+	margin: auto;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 0.2rem;
+	background-color: rgb(202, 167, 224);
 }
 
 .mini-eliminated {
 	border-color: red;
 	background-color: red;
 }
-
-.minicard {
-	margin: auto;
-	text-align: center;
-}
-
 
 /* inner grid - eacrgb(0, 0, 0)racter card */
 .board {
@@ -116,6 +151,7 @@ p {
   	flex-flow: column nowrap;
   	align-items: center;
 	border-radius: 1rem;
+	max-height: 100%;
 	margin: 0.25rem;
 	background-color: var(--teal);
 }
@@ -136,22 +172,23 @@ h4 {
 
 .entireGame {
 	display: flex;
-	/* flex-wrap: wrap; */
-	justify-content: space-between;
-	margin-right: 65px;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	margin: 1rem;
 }
 
 .winner {
 	border-color: gold;
 	background-color: gold;
+	box-shadow: 0px 0px 50px var(--gold);
 }
 
 .player-section{
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: column;
-	justify-content: space-between;
-	width: 15%;
+	justify-content: space-around;
+	width: 20%;
 
 }
 
@@ -160,8 +197,11 @@ h4 {
 	padding: 15px;
 	border-radius: 12px;
 	/* box-shadow: 0px 0px 50px var(--gold); */
-	height: fit-content;
+	/* height: 100%; */
 	border: 3px solid rgb(230, 230, 230);
+	width: 20%;
+	/* height: 100%; */
+	max-height: 500px;
 
 }
 
@@ -178,8 +218,9 @@ h4 {
 
 .output-card {
 	/* border: 2px black dashed; */
-	width: 100%;
-	height: 350px;
+	/* width: 100%; */
+	/* height: 200px; */
+	/* background-color: black; */
 	text-align: center;
 	text-transform: capitalize;
 	/* height: 460px; */
@@ -187,6 +228,11 @@ h4 {
 }
 
 .gameButtons{
+	margin-right: 6%;
+/* float: left;
+left: 20%; */
+/* position:absolute;
+right:200px; */
 
 }
 
@@ -199,7 +245,7 @@ h4 {
 
 .chosen-image {
 	max-width: 100%;
-	border-radius: 2rem;
+	border-radius: 1rem;
 }
 
 h1 {
@@ -224,7 +270,8 @@ h3 {
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .questionButtons{
@@ -285,17 +332,22 @@ h3 {
 }
 
 .questions {
-	color: black;
-	background-color: var(--teal);
-	width: 200px;
-	display: flex;
-	list-style: none;
 	text-align: center;
+	border-radius: 12px;
+	background-color: #a4cc98;
+	border: none;
+	/* padding: 10px; */
+	background-color: var(--teal);
+	
+	color: black;
+	/* width: 200px; */
+	/* display: flex; */
+	list-style: none;
 }
 
 .questionOptions {
 	position: relative;
-	font-size: 14px;
+	font-size: medium;
 }
 
 .questionOptions h5 {

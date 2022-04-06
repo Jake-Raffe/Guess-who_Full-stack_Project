@@ -62,8 +62,8 @@ const TopBarContainer = ({compareQueryToBoard, displayMessage, resetGame, startG
     return (
         <div id='questionForm'>
             <section className="questionButtons">
-                <QuestionForm compareQueryToBoard={compareQueryToBoard} playerTurn={playerTurn} setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} setDisplayQuestionMessage={setDisplayQuestionMessage} chosenCharacter={chosenCharacter}/>
-                <button className="bubble buttons" onClick={() => handleGuessClick()}>Make Guess</button>
+                <QuestionForm compareQueryToBoard={compareQueryToBoard} playerTurn={playerTurn} handleGuessClick={handleGuessClick} setQueryOption={setQueryOption} setDisplayMessage={setDisplayMessage} setPlayerTurn={setPlayerTurn} runComputerTurn={runComputerTurn} setDisplayQuestionMessage={setDisplayQuestionMessage} chosenCharacter={chosenCharacter}/>
+                
             </section>
             <section className="displayMessage bubble">
                 <h2 >{displayMessage}</h2>

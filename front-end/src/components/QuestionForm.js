@@ -5,7 +5,7 @@ import { questions } from "./questions"
 
 
 
-const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDisplayMessage, setPlayerTurn, runComputerTurn, setDisplayQuestionMessage, chosenCharacter}) => {   // this is like our navBar
+const QuestionForm = ({compareQueryToBoard, handleGuessClick, playerTurn, setQueryOption, setDisplayMessage, setPlayerTurn, runComputerTurn, setDisplayQuestionMessage, chosenCharacter}) => {   // this is like our navBar
 
 
     const depthLevel = 0;
@@ -28,6 +28,7 @@ const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDispl
         // console.log('pc did its turn');
     }
 
+    
 
     return (
         <>
@@ -36,7 +37,10 @@ const QuestionForm = ({compareQueryToBoard, playerTurn, setQueryOption, setDispl
             // create a prop called options which takes our questions.js
         })}
         </div>
-        <button type="button" className=" bubble buttons" onClick={() => submitQuestion()}>Ask question!</button>
+        <div>
+            <button type="button" className=" bubble buttons" onClick={() => submitQuestion()}>Ask a question!</button>
+            <button className="bubble buttons" onClick={() => handleGuessClick()}>Make a guess...</button>
+        </div>
         </>
     )
 }
