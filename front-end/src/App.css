@@ -73,7 +73,7 @@ body{
 }
 
 .questionButtons {
-	margin-left: 4%;
+	margin-left: 5.3%;
 }
 
 .displayMessage{
@@ -82,7 +82,7 @@ body{
 	background-color: var(--teal);
 	text-align: center;
 	margin: auto;
-	margin-right: 6.2%;
+	margin-right: 7.6%;
 	padding: 10px;
 	height: 100px;
 }
